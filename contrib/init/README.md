@@ -1,11 +1,11 @@
 Sample configuration files for:
 ```
-SystemD: pivxd.service
-Upstart: pivxd.conf
-OpenRC:  pivxd.openrc
-         pivxd.openrcconf
-CentOS:  pivxd.init
-macOS:    org.pivx.pivxd.plist
+SystemD: concreted.service
+Upstart: concreted.conf
+OpenRC:  concreted.openrc
+         concreted.openrcconf
+CentOS:  concreted.init
+macOS:    org.concrete.concreted.plist
 ```
 have been made available to assist packagers in creating node packages here.
 
