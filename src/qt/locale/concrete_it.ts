@@ -1622,8 +1622,8 @@ Si avvierà automaticamente non appena il portafoglio avrà sufficienti conferme
         <translation>user_masternode</translation>
     </message>
     <message>
-        <source>Address: 88.26.164.88:51474</source>
-        <translation>Address: 88.26.164.88:51474</translation>
+        <source>Address: 88.26.164.88:32814</source>
+        <translation>Address: 88.26.164.88:32814</translation>
     </message>
     <message>
         <source>Jan. 19, 2019</source>
@@ -6495,8 +6495,8 @@ Portafoglio CONCRETE Core.</translation>
         <translation>È necessario specificare una chiave masternodepriv nella configurazione. Consultare la documentazione per assistenza.</translation>
     </message>
     <message>
-        <source>(51472 could be used only on mainnet)</source>
-        <translation>(51472 potrebbe essere utilizzato solo su mainnet)</translation>
+        <source>(32812 could be used only on mainnet)</source>
+        <translation>(32812 potrebbe essere utilizzato solo su mainnet)</translation>
     </message>
     <message>
         <source>(default: %s)</source>
@@ -6507,8 +6507,8 @@ Portafoglio CONCRETE Core.</translation>
         <translation>(default: 1)</translation>
     </message>
     <message>
-        <source>(must be 51472 for mainnet)</source>
-        <translation>(deve essere 51472 per mainnet)</translation>
+        <source>(must be 32812 for mainnet)</source>
+        <translation>(deve essere 32812 per mainnet)</translation>
     </message>
     <message>
         <source>Accept command line and JSON-RPC commands</source>

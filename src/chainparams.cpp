@@ -227,7 +227,7 @@ public:
         pchMessageStart[1] = 0xc4;
         pchMessageStart[2] = 0xfd;
         pchMessageStart[3] = 0xe9;
-        nDefaultPort = 51472;
+        nDefaultPort = 32812;
 
         // Note that of those with the service bits flag, most only support a subset of possible options
         vSeeds.push_back(CDNSSeedData("ziofabry.twt.it", "mainnet.concrete.seed.ziofabry.twt.it", true));     // Primary DNS Seeder from ZioFabry
@@ -341,7 +341,7 @@ public:
         pchMessageStart[1] = 0x76;
         pchMessageStart[2] = 0x65;
         pchMessageStart[3] = 0xba;
-        nDefaultPort = 51474;
+        nDefaultPort = 32814;
 
         vFixedSeeds.clear();
         vSeeds.clear();
@@ -458,7 +458,7 @@ public:
         pchMessageStart[1] = 0xcf;
         pchMessageStart[2] = 0x7e;
         pchMessageStart[3] = 0xac;
-        nDefaultPort = 51476;
+        nDefaultPort = 32816;
 
         vFixedSeeds.clear(); //! Testnet mode doesn't have any fixed seeds.
         vSeeds.clear();      //! Testnet mode doesn't have any DNS seeds.
