@@ -3063,7 +3063,7 @@ Enten mint højere nomineringer (så færre input er nødvendige) eller reducere
         <translation>DASH "core" udviklerne</translation>
     </message>
     <message>
-        <source>The XYZK Core developers</source>
+        <source>The PIVX Core Developers</source>
         <translation>CONCRETE "core" udviklerne</translation>
     </message>
     <message>
@@ -3920,8 +3920,8 @@ Enten mint højere nomineringer (så færre input er nødvendige) eller reducere
         <translation>Copyright (C) 2014-%i The Dash Core Developers </translation>
     </message>
     <message>
-        <source>Copyright (C) 2015-%i The XYZK Core Developers</source>
-        <translation>Copyright (C) 2015-%i The XYZK Core Developers</translation>
+        <source>Copyright (C) 2015-%i The PIVX Core Developers</source>
+        <translation>Copyright (C) 2015-%i The PIVX Core Developers</translation>
     </message>
     <message>
         <source>Corrupted block database detected</source>

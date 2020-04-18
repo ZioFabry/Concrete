@@ -5356,7 +5356,7 @@ Are you sure?
         <translation>达世币核心开发者</translation>
     </message>
     <message>
-        <source>The XYZK Core developers</source>
+        <source>The PIVX Core Developers</source>
         <translation>CONCRETE 核心开发者</translation>
     </message>
     <message>
@@ -6558,7 +6558,7 @@ CONCRETE核心钱包</translation>
         <translation>版权所有(C) 2014-%i的达世核心开发者</translation>
     </message>
     <message>
-        <source>Copyright (C) 2015-%i The XYZK Core Developers</source>
+        <source>Copyright (C) 2015-%i The PIVX Core Developers</source>
         <translation>版权所有(C) 2015-%i CONCRETE核心开发者</translation>
     </message>
     <message>

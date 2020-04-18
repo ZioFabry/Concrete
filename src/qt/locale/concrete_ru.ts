@@ -5355,7 +5355,7 @@ Are you sure?
         <translation>Разработчики Dash Core</translation>
     </message>
     <message>
-        <source>The XYZK Core developers</source>
+        <source>The PIVX Core Developers</source>
         <translation>Разработчики CONCRETE Core</translation>
     </message>
     <message>
@@ -6525,7 +6525,7 @@ CONCRETE Core Wallet</source>
         <translation>Copyright (C) 2014-%i Разработчики Dash Core</translation>
     </message>
     <message>
-        <source>Copyright (C) 2015-%i The XYZK Core Developers</source>
+        <source>Copyright (C) 2015-%i The PIVX Core Developers</source>
         <translation>Copyright (C) 2015-%i Разработчики CONCRETE Core</translation>
     </message>
     <message>

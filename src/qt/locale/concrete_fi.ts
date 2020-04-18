@@ -1627,7 +1627,7 @@
         <translation>Dash Core kehittäjät</translation>
     </message>
     <message>
-        <source>The XYZK Core developers</source>
+        <source>The PIVX Core Developers</source>
         <translation>CONCRETE Core kehittäjät</translation>
     </message>
     <message>

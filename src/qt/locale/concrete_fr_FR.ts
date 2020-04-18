@@ -5200,7 +5200,7 @@ Confirmez-vous ?
         <translation>Les développeurs Dash Core</translation>
     </message>
     <message>
-        <source>The XYZK Core developers</source>
+        <source>The PIVX Core Developers</source>
         <translation>Les développeurs CONCRETE Core</translation>
     </message>
     <message>
@@ -6366,7 +6366,7 @@ Portefeuille CONCRETE Core</translation>
         <translation>Copyright (C) 2014-%i Les développeurs de DASH Core</translation>
     </message>
     <message>
-        <source>Copyright (C) 2015-%i The XYZK Core Developers</source>
+        <source>Copyright (C) 2015-%i The PIVX Core Developers</source>
         <translation>Copyright (C) 2015-%i Les développeurs de CONCRETE Core</translation>
     </message>
     <message>

@@ -1,4 +1,4 @@
-// Copyright (c) 2020 The XYZK Core developers
+// Copyright (c) 2020 The PIVX Core Developers
 // Distributed under the MIT software license, see the accompanying
 #ifndef CONCRETE_HDCHAIN_H
 #define CONCRETE_HDCHAIN_H

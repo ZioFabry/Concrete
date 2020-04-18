@@ -3728,7 +3728,7 @@ Var vänlig kontrollera adressen och försök igen.</translation>
         <translation>Dash Core utvecklarna</translation>
     </message>
     <message>
-        <source>The XYZK Core developers</source>
+        <source>The PIVX Core Developers</source>
         <translation>CONCRETE Core utvecklarna</translation>
     </message>
     <message>
@@ -4612,8 +4612,8 @@ Var vänlig kontrollera adressen och försök igen.</translation>
         <translation>Copyright (C) 2014-%i The Dash Core Developers</translation>
     </message>
     <message>
-        <source>Copyright (C) 2015-%i The XYZK Core Developers</source>
-        <translation>Copyright (C) 2015-%i The XYZK Core Developers</translation>
+        <source>Copyright (C) 2015-%i The PIVX Core Developers</source>
+        <translation>Copyright (C) 2015-%i The PIVX Core Developers</translation>
     </message>
     <message>
         <source>Corrupted block database detected</source>

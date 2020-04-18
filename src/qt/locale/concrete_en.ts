@@ -6612,7 +6612,7 @@ Are you sure?
     </message>
     <message>
         <location line="+1"/>
-        <source>The XYZK Core developers</source>
+        <source>The PIVX Core Developers</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -8153,7 +8153,7 @@ CONCRETE Core Wallet</source>
     </message>
     <message>
         <location line="+1"/>
-        <source>Copyright (C) 2015-%i The XYZK Core Developers</source>
+        <source>Copyright (C) 2015-%i The PIVX Core Developers</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

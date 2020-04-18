@@ -1669,7 +1669,7 @@ Adreso: %4
         <translation>La Dash kerno programistoj</translation>
     </message>
     <message>
-        <source>The XYZK Core developers</source>
+        <source>The PIVX Core Developers</source>
         <translation>La CONCRETE kerno programistoj</translation>
     </message>
     </context>

@@ -2333,7 +2333,7 @@
         <translation>Dash Core developeri</translation>
     </message>
     <message>
-        <source>The XYZK Core developers</source>
+        <source>The PIVX Core Developers</source>
         <translation>CONCRETE Core developeri</translation>
     </message>
     <message>

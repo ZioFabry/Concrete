@@ -1,4 +1,4 @@
-// Copyright (c) 2018 The XYZK developers
+// Copyright (c) 2018 The PIVX Core Developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 

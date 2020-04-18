@@ -287,7 +287,7 @@ QT_TRANSLATE_NOOP("concrete-core", "Connect to a node to retrieve peer addresses
 QT_TRANSLATE_NOOP("concrete-core", "Connection options:"),
 QT_TRANSLATE_NOOP("concrete-core", "Copyright (C) 2009-%i The Bitcoin Core Developers"),
 QT_TRANSLATE_NOOP("concrete-core", "Copyright (C) 2014-%i The Dash Core Developers"),
-QT_TRANSLATE_NOOP("concrete-core", "Copyright (C) 2015-%i The XYZK Core Developers"),
+QT_TRANSLATE_NOOP("concrete-core", "Copyright (C) 2015-%i The PIVX Core Developers"),
 QT_TRANSLATE_NOOP("concrete-core", "Corrupted block database detected"),
 QT_TRANSLATE_NOOP("concrete-core", "Could not parse masternode.conf"),
 QT_TRANSLATE_NOOP("concrete-core", "Couldn't generate the accumulator witness"),

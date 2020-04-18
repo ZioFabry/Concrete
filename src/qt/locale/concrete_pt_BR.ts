@@ -3109,7 +3109,7 @@ Endereço: %4
         <translation>Os desenvolvedores do Dash Core</translation>
     </message>
     <message>
-        <source>The XYZK Core developers</source>
+        <source>The PIVX Core Developers</source>
         <translation>Os desenvolvedores do CONCRETE Core</translation>
     </message>
     <message>
@@ -3697,7 +3697,7 @@ Endereço: %4
         <translation>Todos os direitos reservados (C) 2014-%i aos Desenvolvedores do Dash Core</translation>
     </message>
     <message>
-        <source>Copyright (C) 2015-%i The XYZK Core Developers</source>
+        <source>Copyright (C) 2015-%i The PIVX Core Developers</source>
         <translation>Todos os direitos reservados (C) 2015-%i aos Desenvolvedores do CONCRETE Core</translation>
     </message>
     <message>

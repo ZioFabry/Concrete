@@ -2527,8 +2527,8 @@ Please check the address and try again.</translation>
         <translation>The Dash Core developers</translation>
     </message>
     <message>
-        <source>The XYZK Core developers</source>
-        <translation>The XYZK Core developers</translation>
+        <source>The PIVX Core Developers</source>
+        <translation>The PIVX Core Developers</translation>
     </message>
     <message>
         <source>[testnet]</source>
@@ -3347,8 +3347,8 @@ Please check the address and try again.</translation>
         <translation>Copyright (C) 2014-%i The Dash Core Developers</translation>
     </message>
     <message>
-        <source>Copyright (C) 2015-%i The XYZK Core Developers</source>
-        <translation>Copyright (C) 2015-%i The XYZK Core Developers</translation>
+        <source>Copyright (C) 2015-%i The PIVX Core Developers</source>
+        <translation>Copyright (C) 2015-%i The PIVX Core Developers</translation>
     </message>
     <message>
         <source>Corrupted block database detected</source>

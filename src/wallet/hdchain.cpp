@@ -1,4 +1,4 @@
-// Copyright (c) 2020 The XYZK Core developers
+// Copyright (c) 2020 The PIVX Core Developers
 // Distributed under the MIT software license, see the accompanying
 #include "wallet/hdchain.h"
 

@@ -5399,7 +5399,7 @@ Weet je zeker dat?
         <translation>De Dash Kernontwikkelaars</translation>
     </message>
     <message>
-        <source>The XYZK Core developers</source>
+        <source>The PIVX Core Developers</source>
         <translation>De CONCRETE Kernontwikkelaars</translation>
     </message>
     <message>
@@ -6601,7 +6601,7 @@ CONCRETE Core Portemonnee</translation>
         <translation>Copyright (C) 2014-%i The Dash Kernontwikkelaars</translation>
     </message>
     <message>
-        <source>Copyright (C) 2015-%i The XYZK Core Developers</source>
+        <source>Copyright (C) 2015-%i The PIVX Core Developers</source>
         <translation>Copyright (C) 2015-%i The CONCRETE Kernontwikkelaars</translation>
     </message>
     <message>
