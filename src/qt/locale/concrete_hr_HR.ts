@@ -1287,7 +1287,7 @@ https://www.transifex.com/concrete-project/concrete-project-translations</transl
     </message>
     <message>
         <source>CONCRETE Core client</source>
-        <translation>CCTIX Core Klijent</translation>
+        <translation>CONCRETE Core Klijent</translation>
     </message>
     <message>
         <source>Error</source>

@@ -1526,7 +1526,7 @@ Si avvierà automaticamente non appena il portafoglio avrà sufficienti conferme
     </message>
     <message>
         <source>Welcome to CONCRETE Core.</source>
-        <translation>Benvenuto in CCTIX Core.</translation>
+        <translation>Benvenuto in CONCRETE Core.</translation>
     </message>
     <message>
         <source>As this is the first time the program is launched, you can choose where CONCRETE Core will store its data.</source>
