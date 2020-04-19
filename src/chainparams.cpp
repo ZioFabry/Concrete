@@ -183,17 +183,17 @@ public:
         consensus.height_last_PoW                        = 1000;
         consensus.height_last_ZC_AccumCheckpoint         = 0;
         consensus.height_last_ZC_WrappedSerials          = 0;
-        consensus.height_start_BIP65                     = 2;                      // Block v5
+        consensus.height_start_BIP65                     = 20;                     // Block v5
         consensus.height_start_InvalidUTXOsCheck         = 1;
-        consensus.height_start_MessSignaturesV2          = 4;                      // height_start_TimeProtoV2
+        consensus.height_start_MessSignaturesV2          = 40;                     // height_start_TimeProtoV2
         consensus.height_start_StakeModifierNewSelection = 2;
-        consensus.height_start_StakeModifierV2           = 3;                      // Block v6
-        consensus.height_start_TimeProtoV2               = 4;                      // Block v7
-        consensus.height_start_ZC                        = 1;                      // Block v4
+        consensus.height_start_StakeModifierV2           = 30;                     // Block v6
+        consensus.height_start_TimeProtoV2               = 40;                     // Block v7
+        consensus.height_start_ZC                        = 10;                     // Block v4
         consensus.height_start_ZC_InvalidSerials         = 999999999;
-        consensus.height_start_ZC_PublicSpends           = 1;
-        consensus.height_start_ZC_SerialRangeCheck       = 1;
-        consensus.height_start_ZC_SerialsV2              = 10;
+        consensus.height_start_ZC_PublicSpends           = 10;
+        consensus.height_start_ZC_SerialRangeCheck       = 10;
+        consensus.height_start_ZC_SerialsV2              = 40;
         consensus.height_ZC_RecalcAccumulators           = 999999999;
 
         // Zerocoin-related params
@@ -306,17 +306,17 @@ public:
         consensus.height_last_PoW                        = 200;
         consensus.height_last_ZC_AccumCheckpoint         = 0;
         consensus.height_last_ZC_WrappedSerials          = 0;
-        consensus.height_start_BIP65                     = 2;                      // Block v5
+        consensus.height_start_BIP65                     = 20;                     // Block v5
         consensus.height_start_InvalidUTXOsCheck         = 1;
-        consensus.height_start_MessSignaturesV2          = 4;                      // height_start_TimeProtoV2
+        consensus.height_start_MessSignaturesV2          = 40;                     // height_start_TimeProtoV2
         consensus.height_start_StakeModifierNewSelection = 2;
-        consensus.height_start_StakeModifierV2           = 3;                      // Block v6
-        consensus.height_start_TimeProtoV2               = 4;                      // Block v7
-        consensus.height_start_ZC                        = 1;                      // Block v4
+        consensus.height_start_StakeModifierV2           = 30;                     // Block v6
+        consensus.height_start_TimeProtoV2               = 40;                     // Block v7
+        consensus.height_start_ZC                        = 10;                     // Block v4
         consensus.height_start_ZC_InvalidSerials         = 999999999;
-        consensus.height_start_ZC_PublicSpends           = 1;
-        consensus.height_start_ZC_SerialRangeCheck       = 1;
-        consensus.height_start_ZC_SerialsV2              = 10;
+        consensus.height_start_ZC_PublicSpends           = 10;
+        consensus.height_start_ZC_SerialRangeCheck       = 10;
+        consensus.height_start_ZC_SerialsV2              = 40;
         consensus.height_ZC_RecalcAccumulators           = 999999999;
 
         // Zerocoin-related params
