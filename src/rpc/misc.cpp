@@ -723,7 +723,7 @@ UniValue getstakingstatus(const UniValue& params, bool fHelp)
 UniValue makekeypair(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() > 1) {
-                throw runtime_error(
+        throw std::runtime_error(
             "makekeypair [\"prefix\"]\n"
             "\nCreates a new key pair.\n"
             "It returns a json object with the public and private key.\n"
@@ -738,13 +738,13 @@ UniValue makekeypair(const UniValue& params, bool fHelp)
             "]\n");
     }
 
-    string strPrefix = "";
+    std::string strPrefix = "";
     if (params.size() > 0)
         strPrefix = params[0].get_str();
 
     CKey key;
     CPubKey pubkey;
-    string pubkeyhex;
+    std::string pubkeyhex;
     int nCount = 0;
     do
     {
