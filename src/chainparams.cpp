@@ -352,7 +352,6 @@ public:
         // nodes with support for servicebits filtering should be at the top
         vSeeds.push_back(CDNSSeedData("ziofabry.twt.it", "testnet.concrete.seed.ziofabry.twt.it", true));     // Primary DNS Seeder from ZioFabry
 
-
         base58Prefixes[PUBKEY_ADDRESS]  = std::vector<unsigned char>(1, 88);        // Start with 'c' from https://en.bitcoin.it/wiki/List_of_address_prefixes
         base58Prefixes[SCRIPT_ADDRESS]  = std::vector<unsigned char>(1, 18);        // Start with '8' from https://en.bitcoin.it/wiki/List_of_address_prefixes
         base58Prefixes[STAKING_ADDRESS] = std::vector<unsigned char>(1, 125);       // Start with 's' from https://en.bitcoin.it/wiki/List_of_address_prefixes
@@ -399,8 +398,8 @@ public:
          */
         genesis = CreateGenesisBlock(1587254218, 1201522, 0x1e0ffff0, 1, 0 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x0000041e482b9b9691d98eefb48473405c0b8ec31b76df3797c74a78680ef818"));
-        assert(genesis.hashMerkleRoot     == uint256S("0x1b2ef6e2f28be914103a277377ae7729dcd125dfeb8bf97bd5964ba72b6dc39b"));
+        assert(consensus.hashGenesisBlock == uint256S("0x00000f31de924cf332441aa9b2955c1131ff7bbe81295e17fc32d5db6f7ea5e7"));
+        assert(genesis.hashMerkleRoot     == uint256S("0xf3ae756f9f96cc9047e36fc0ed5001f9799f439738c89ee973adb6555344d0d9"));
 
         consensus.fPowAllowMinDifficultyBlocks           = true;
         consensus.powLimit                               = ~UINT256_ZERO >> 20;   // CONCRETE starting difficulty is 1 / 2^12
@@ -466,7 +465,6 @@ public:
         consensus.ZC_MinStakeDepth                       = 10;
         consensus.ZC_TimeStart                           = 0;                     // not implemented on regtest
         consensus.ZC_WrappedSerialsSupply                = 0;
-
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
