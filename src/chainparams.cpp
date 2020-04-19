@@ -174,7 +174,7 @@ public:
         consensus.nTimeSlotLength                        = 15;
 
         // spork keys
-        consensus.strSporkPubKey                         = "040F129DE6546FE405995329A887329BED4321325B1A73B0A257423C05C1FCFE9E40EF0678AEF59036A22C42E61DFD29DF7EFB09F56CC73CADF64E05741880E3E7";
+        consensus.strSporkPubKey                         = "04c6e933bb414a6a50e8302f3f599dd43acdd877eedc27ade9e0ea258fbc392aec4b56e3b8801b498c3259d1153032a900fe8c94d7be16572dc3146d776fbf01b5";
         consensus.strSporkPubKeyOld                      = "";
         consensus.nTime_EnforceNewSporkKey               = 0;
         consensus.nTime_RejectOldSporkKey                = 0;
@@ -297,7 +297,7 @@ public:
         consensus.nTimeSlotLength                        = 15;
 
         // spork keys
-        consensus.strSporkPubKey                         = "040F129DE6546FE405995329A887329BED4321325B1A73B0A257423C05C1FCFE9E40EF0678AEF59036A22C42E61DFD29DF7EFB09F56CC73CADF64E05741880E3E7";
+        consensus.strSporkPubKey                         = "04a81db419077aa2e5e2e00ec51e02749b5cbe2bb61a18959b2229485d4c8af0a9964bc6c7aa069e2391736c405cb40bb3c8fc7985a48204a8408e8c2db3b18da0";
         consensus.strSporkPubKeyOld                      = "";
         consensus.nTime_EnforceNewSporkKey               = 0;
         consensus.nTime_RejectOldSporkKey                = 0;
@@ -327,13 +327,13 @@ public:
                                                            "8441436038339044149526344321901146575444541784240209246165157233507787077498171257724679629263863563732899121548"
                                                            "31438167899885040445364023527381951378636564391212010397122822120720357";
 
-        consensus.ZC_MaxPublicSpendsPerTx                = 637;                        // Assume about 220 bytes each input
-        consensus.ZC_MaxSpendsPerTx                      = 7;                          // Assume about 20kb each input
+        consensus.ZC_MaxPublicSpendsPerTx                = 637;             // Assume about 220 bytes each input
+        consensus.ZC_MaxSpendsPerTx                      = 7;               // Assume about 20kb each input
         consensus.ZC_MinMintConfirmations                = 20;
         consensus.ZC_MinMintFee                          = 1 * CENT;
         consensus.ZC_MinStakeDepth                       = 200;
-        consensus.ZC_TimeStart                           = 1501776000;
-        consensus.ZC_WrappedSerialsSupply                = 0;                          // WrappedSerials only on main net
+        consensus.ZC_TimeStart                           = 1587256775;      // 2020/04/19 @ 12:39am (UTC)
+        consensus.ZC_WrappedSerialsSupply                = 0;               // WrappedSerials only on main net
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -423,12 +423,11 @@ public:
 
         /* 
             Spork Key for RegTest:
-            WIF private key: 932HEevBSujW2ud7RfB1YF91AFygbBRQj3de3LyaCRqNzKKgWXi
-            private key hex: bd4960dcbd9e7f2223f24e7164ecb6f1fe96fc3a416f5d3a830ba5720c84b8ca
-            Address: yCvUVd72w7xpimf981m114FSFbmAmne7j9
+              "PublicKey": "040876108cf6439f3ee4b0b5938ed699464369506162791f5c9ce8730af8c1c71caf295bc9ea5dfc67a0294b16df272ff3ef1ba27141cda9ffdfd2320da6b0cd2c",
+              "PrivateKey": "4dPeoAv1oeB2wVGEyi3L5umhEfkAryfCZh86NPunfSf7HHQmNWQ"
         */
 
-        consensus.strSporkPubKey                         = "040F129DE6546FE405995329A887329BED4321325B1A73B0A257423C05C1FCFE9E40EF0678AEF59036A22C42E61DFD29DF7EFB09F56CC73CADF64E05741880E3E7";
+        consensus.strSporkPubKey                         = "040876108cf6439f3ee4b0b5938ed699464369506162791f5c9ce8730af8c1c71caf295bc9ea5dfc67a0294b16df272ff3ef1ba27141cda9ffdfd2320da6b0cd2c";
         consensus.strSporkPubKeyOld                      = "";
         consensus.nTime_EnforceNewSporkKey               = 0;
         consensus.nTime_RejectOldSporkKey                = 0;
