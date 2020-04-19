@@ -226,10 +226,10 @@ public:
         // Note that of those with the service bits flag, most only support a subset of possible options
         vSeeds.push_back(CDNSSeedData("ziofabry.twt.it", "mainnet.concrete.seed.ziofabry.twt.it", true));     // Primary DNS Seeder from ZioFabry
 
-        base58Prefixes[PUBKEY_ADDRESS]  = std::vector<unsigned char>(1, 30);        // Start with 'B' from https://en.bitcoin.it/wiki/List_of_address_prefixes
+        base58Prefixes[PUBKEY_ADDRESS]  = std::vector<unsigned char>(1, 28);        // Start with 'C' from https://en.bitcoin.it/wiki/List_of_address_prefixes
         base58Prefixes[SCRIPT_ADDRESS]  = std::vector<unsigned char>(1, 15);        // Start with '7' from https://en.bitcoin.it/wiki/List_of_address_prefixes
         base58Prefixes[STAKING_ADDRESS] = std::vector<unsigned char>(1, 63);        // Start with 'S' from https://en.bitcoin.it/wiki/List_of_address_prefixes
-        base58Prefixes[SECRET_KEY]      = std::vector<unsigned char>(1, 115);       // Start with 'o' from https://en.bitcoin.it/wiki/List_of_address_prefixes
+        base58Prefixes[SECRET_KEY]      = std::vector<unsigned char>(1, 45);        // Start with 'K' from https://en.bitcoin.it/wiki/List_of_address_prefixes
 
         base58Prefixes[EXT_PUBLIC_KEY]  = boost::assign::list_of(0x04)(0x2E)(0x26)(0x35).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[EXT_SECRET_KEY]  = boost::assign::list_of(0x04)(0x1E)(0x34)(0x2D).convert_to_container<std::vector<unsigned char> >();
@@ -273,8 +273,8 @@ public:
          */
         genesis = CreateGenesisBlock(1587254218, 1201522, 0x1e0ffff0, 1, 0 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x0000041e482b9b9691d98eefb48473405c0b8ec31b76df3797c74a78680ef818"));
-        assert(genesis.hashMerkleRoot     == uint256S("0x1b2ef6e2f28be914103a277377ae7729dcd125dfeb8bf97bd5964ba72b6dc39b"));
+        assert(consensus.hashGenesisBlock == uint256S("0x00000f31de924cf332441aa9b2955c1131ff7bbe81295e17fc32d5db6f7ea5e7"));
+        assert(genesis.hashMerkleRoot     == uint256S("0xf3ae756f9f96cc9047e36fc0ed5001f9799f439738c89ee973adb6555344d0d9"));
 
         consensus.fPowAllowMinDifficultyBlocks           = true;
         consensus.powLimit                               = ~UINT256_ZERO >> 20;        // CONCRETE starting difficulty is 1 / 2^12
@@ -352,16 +352,17 @@ public:
         // nodes with support for servicebits filtering should be at the top
         vSeeds.push_back(CDNSSeedData("ziofabry.twt.it", "testnet.concrete.seed.ziofabry.twt.it", true));     // Primary DNS Seeder from ZioFabry
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 139); // Testnet concrete addresses start with 'x' or 'y'
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 19);  // Testnet concrete script addresses start with '8' or '9'
-        base58Prefixes[STAKING_ADDRESS] = std::vector<unsigned char>(1, 73);     // starting with 'W'
-        base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 239);     // Testnet private keys start with '9' or 'c' (Bitcoin defaults)
-        // Testnet concrete BIP32 pubkeys start with 'DRKV'
-        base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x3a)(0x80)(0x61)(0xa0).convert_to_container<std::vector<unsigned char> >();
-        // Testnet concrete BIP32 prvkeys start with 'DRKP'
-        base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x3a)(0x80)(0x58)(0x37).convert_to_container<std::vector<unsigned char> >();
+
+        base58Prefixes[PUBKEY_ADDRESS]  = std::vector<unsigned char>(1, 88);        // Start with 'c' from https://en.bitcoin.it/wiki/List_of_address_prefixes
+        base58Prefixes[SCRIPT_ADDRESS]  = std::vector<unsigned char>(1, 18);        // Start with '8' from https://en.bitcoin.it/wiki/List_of_address_prefixes
+        base58Prefixes[STAKING_ADDRESS] = std::vector<unsigned char>(1, 125);       // Start with 's' from https://en.bitcoin.it/wiki/List_of_address_prefixes
+        base58Prefixes[SECRET_KEY]      = std::vector<unsigned char>(1, 108);       // Start with 'k' from https://en.bitcoin.it/wiki/List_of_address_prefixes
+
+        base58Prefixes[EXT_PUBLIC_KEY]  = boost::assign::list_of(0x2f)(0x2E)(0x26)(0x35).convert_to_container<std::vector<unsigned char> >();
+        base58Prefixes[EXT_SECRET_KEY]  = boost::assign::list_of(0x2f)(0x1E)(0x34)(0x2D).convert_to_container<std::vector<unsigned char> >();
+
         // Testnet concrete BIP44 coin type is '1' (All coin's testnet default)
-        base58Prefixes[EXT_COIN_TYPE] = boost::assign::list_of(0x80)(0x00)(0x00)(0x01).convert_to_container<std::vector<unsigned char> >();
+        base58Prefixes[EXT_COIN_TYPE]   = boost::assign::list_of(0x80)(0x00)(0x00)(0x01).convert_to_container<std::vector<unsigned char> >();
 
         convertSeed6(vFixedSeeds, pnSeed6_test, ARRAYLEN(pnSeed6_test));
     }
