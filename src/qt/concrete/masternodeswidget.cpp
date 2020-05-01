@@ -483,7 +483,7 @@ void MasterNodesWidget::onCreateMNClicked()
         return;
     }
 
-    if (walletModel->getBalance() <= (COIN * 10000)) {
+    if (walletModel->getBalance() <= (COIN * GetCollateral())) {
         inform(tr("Not enough balance to create a masternode, 10,000 CCT required."));
         return;
     }
