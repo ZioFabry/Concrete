@@ -54,18 +54,19 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
  *
  *  ---------------
  *  algorithm: quark
- *  pzTimestamp: 2020/04/19 CONCRETE by ZioFabry
+ *  pzTimestamp: 2020/04/30 CONCRETE by ZioFabry
  *  pubkey: 04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f
- *  bits: 504365040     0x1e0ffff0
- *  time: 1587254218
- *  merkle root hash: f3ae756f9f96cc9047e36fc0ed5001f9799f439738c89ee973adb6555344d0d9
+ *  block version: 1
+ *  bits: 504365040
+ *  time: 1588281431
+ *  merkle root hash: 038bb92b0d3d55cc2288cfed57135425058e29834e759a3e078486023ed8852a
  *  Searching for genesis hash...
- *  nonce: 1201522
- *  genesis hash: 00000f31de924cf332441aa9b2955c1131ff7bbe81295e17fc32d5db6f7ea5e7
- */
+ *  nonce: 327577
+ *  genesis hash: 00000f1ce413fdebc51a862283c5d992ceda41960e81aa09b979211468fcddde
+ **/
 static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
-    const char* pszTimestamp = "2020/04/19 CONCRETE by ZioFabry";
+    const char* pszTimestamp = "2020/04/30 CONCRETE by ZioFabry";
     const CScript genesisOutputScript = CScript() << ParseHex("04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f") << OP_CHECKSIG;
     return CreateGenesisBlock(pszTimestamp, genesisOutputScript, nTime, nNonce, nBits, nVersion, genesisReward);
 }
@@ -139,19 +140,20 @@ public:
         /**
          *  ---------------
          *  algorithm: quark
-         *  pzTimestamp: 2020/04/19 CONCRETE by ZioFabry
+         *  pzTimestamp: 2020/04/30 CONCRETE by ZioFabry
          *  pubkey: 04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f
-         *  bits: 504365040     0x1e0ffff0
-         *  time: 1587254218
-         *  merkle root hash: f3ae756f9f96cc9047e36fc0ed5001f9799f439738c89ee973adb6555344d0d9
+         *  block version: 1
+         *  bits: 504365040
+         *  time: 1588281431
+         *  merkle root hash: 038bb92b0d3d55cc2288cfed57135425058e29834e759a3e078486023ed8852a
          *  Searching for genesis hash...
-         *  nonce: 1201522
-         *  genesis hash: 00000f31de924cf332441aa9b2955c1131ff7bbe81295e17fc32d5db6f7ea5e7
+         *  nonce: 327577
+         *  genesis hash: 00000f1ce413fdebc51a862283c5d992ceda41960e81aa09b979211468fcddde
          */
-        genesis = CreateGenesisBlock(1587254218, 1201522, 0x1e0ffff0, 1, 0 * COIN);
+        genesis = CreateGenesisBlock(1588281431, 327577, 0x1e0ffff0, 1, 0 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x00000f31de924cf332441aa9b2955c1131ff7bbe81295e17fc32d5db6f7ea5e7"));
-        assert(genesis.hashMerkleRoot     == uint256S("0xf3ae756f9f96cc9047e36fc0ed5001f9799f439738c89ee973adb6555344d0d9"));
+        assert(consensus.hashGenesisBlock == uint256S("0x00000f1ce413fdebc51a862283c5d992ceda41960e81aa09b979211468fcddde"));
+        assert(genesis.hashMerkleRoot     == uint256S("0x038bb92b0d3d55cc2288cfed57135425058e29834e759a3e078486023ed8852a"));
 
         consensus.fPowAllowMinDifficultyBlocks           = false;
         consensus.powLimit                               = ~UINT256_ZERO >> 20;    // CONCRETE starting difficulty is 1 / 2^12
@@ -173,6 +175,10 @@ public:
         consensus.nTargetSpacing                         = 1 * 60;
         consensus.nTimeSlotLength                        = 15;
 
+        consensus.nHalvingInterval                       = 525600;
+        consensus.nInflationPerc                         = 0.14;
+        consensus.nInflationPercAnnualDecrease           = 0.10;
+
         // spork keys
         consensus.strSporkPubKey                         = "04c6e933bb414a6a50e8302f3f599dd43acdd877eedc27ade9e0ea258fbc392aec4b56e3b8801b498c3259d1153032a900fe8c94d7be16572dc3146d776fbf01b5";
         consensus.strSporkPubKeyOld                      = "";
@@ -183,17 +189,17 @@ public:
         consensus.height_last_PoW                        = 1000;
         consensus.height_last_ZC_AccumCheckpoint         = 0;
         consensus.height_last_ZC_WrappedSerials          = 0;
-        consensus.height_start_BIP65                     = 20;                     // Block v5
-        consensus.height_start_InvalidUTXOsCheck         = 1;
-        consensus.height_start_MessSignaturesV2          = 40;                     // height_start_TimeProtoV2
-        consensus.height_start_StakeModifierNewSelection = 2;
-        consensus.height_start_StakeModifierV2           = 30;                     // Block v6
-        consensus.height_start_TimeProtoV2               = 40;                     // Block v7
-        consensus.height_start_ZC                        = 10;                     // Block v4
+        consensus.height_start_BIP65                     = 0;                      // Block v5
+        consensus.height_start_InvalidUTXOsCheck         = 999999999;
+        consensus.height_start_MessSignaturesV2          = 0;                      // height_start_TimeProtoV2
+        consensus.height_start_StakeModifierNewSelection = 1050;
+        consensus.height_start_StakeModifierV2           = 1100;                   // Block v6
+        consensus.height_start_TimeProtoV2               = 1200;                   // Block v7
+        consensus.height_start_ZC                        = 1050;                   // Block v4
         consensus.height_start_ZC_InvalidSerials         = 999999999;
-        consensus.height_start_ZC_PublicSpends           = 10;
-        consensus.height_start_ZC_SerialRangeCheck       = 10;
-        consensus.height_start_ZC_SerialsV2              = 40;
+        consensus.height_start_ZC_PublicSpends           = 1300;
+        consensus.height_start_ZC_SerialRangeCheck       = 999999999;
+        consensus.height_start_ZC_SerialsV2              = 1400;
         consensus.height_ZC_RecalcAccumulators           = 999999999;
 
         // Zerocoin-related params
@@ -262,19 +268,20 @@ public:
         /**
          *  ---------------
          *  algorithm: quark
-         *  pzTimestamp: 2020/04/19 CONCRETE by ZioFabry
+         *  pzTimestamp: 2020/04/30 CONCRETE by ZioFabry
          *  pubkey: 04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f
-         *  bits: 504365040     0x1e0ffff0
-         *  time: 1587254218
-         *  merkle root hash: f3ae756f9f96cc9047e36fc0ed5001f9799f439738c89ee973adb6555344d0d9
+         *  block version: 1
+         *  bits: 504365040
+         *  time: 1588281431
+         *  merkle root hash: 038bb92b0d3d55cc2288cfed57135425058e29834e759a3e078486023ed8852a
          *  Searching for genesis hash...
-         *  nonce: 1201522
-         *  genesis hash: 00000f31de924cf332441aa9b2955c1131ff7bbe81295e17fc32d5db6f7ea5e7
+         *  nonce: 327577
+         *  genesis hash: 00000f1ce413fdebc51a862283c5d992ceda41960e81aa09b979211468fcddde
          */
-        genesis = CreateGenesisBlock(1587254218, 1201522, 0x1e0ffff0, 1, 0 * COIN);
+        genesis = CreateGenesisBlock(1588281431, 327577, 0x1e0ffff0, 1, 0 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x00000f31de924cf332441aa9b2955c1131ff7bbe81295e17fc32d5db6f7ea5e7"));
-        assert(genesis.hashMerkleRoot     == uint256S("0xf3ae756f9f96cc9047e36fc0ed5001f9799f439738c89ee973adb6555344d0d9"));
+        assert(consensus.hashGenesisBlock == uint256S("0x00000f1ce413fdebc51a862283c5d992ceda41960e81aa09b979211468fcddde"));
+        assert(genesis.hashMerkleRoot     == uint256S("0x038bb92b0d3d55cc2288cfed57135425058e29834e759a3e078486023ed8852a"));
 
         consensus.fPowAllowMinDifficultyBlocks           = true;
         consensus.powLimit                               = ~UINT256_ZERO >> 20;        // CONCRETE starting difficulty is 1 / 2^12
@@ -296,6 +303,10 @@ public:
         consensus.nTargetSpacing                         = 1 * 60;
         consensus.nTimeSlotLength                        = 15;
 
+        consensus.nHalvingInterval                       = 525600;
+        consensus.nInflationPerc                         = 0.14;
+        consensus.nInflationPercAnnualDecrease           = 0.10;
+
         // spork keys
         consensus.strSporkPubKey                         = "04a81db419077aa2e5e2e00ec51e02749b5cbe2bb61a18959b2229485d4c8af0a9964bc6c7aa069e2391736c405cb40bb3c8fc7985a48204a8408e8c2db3b18da0";
         consensus.strSporkPubKeyOld                      = "";
@@ -303,20 +314,20 @@ public:
         consensus.nTime_RejectOldSporkKey                = 0;
 
         // height based activations
-        consensus.height_last_PoW                        = 200;
+        consensus.height_last_PoW                        = 1000;
         consensus.height_last_ZC_AccumCheckpoint         = 0;
         consensus.height_last_ZC_WrappedSerials          = 0;
-        consensus.height_start_BIP65                     = 20;                     // Block v5
-        consensus.height_start_InvalidUTXOsCheck         = 1;
-        consensus.height_start_MessSignaturesV2          = 40;                     // height_start_TimeProtoV2
-        consensus.height_start_StakeModifierNewSelection = 2;
-        consensus.height_start_StakeModifierV2           = 30;                     // Block v6
-        consensus.height_start_TimeProtoV2               = 40;                     // Block v7
-        consensus.height_start_ZC                        = 10;                     // Block v4
+        consensus.height_start_BIP65                     = 0;                      // Block v5
+        consensus.height_start_InvalidUTXOsCheck         = 999999999;
+        consensus.height_start_MessSignaturesV2          = 0;                      // height_start_TimeProtoV2
+        consensus.height_start_StakeModifierNewSelection = 1050;
+        consensus.height_start_StakeModifierV2           = 1100;                   // Block v6
+        consensus.height_start_TimeProtoV2               = 1200;                   // Block v7
+        consensus.height_start_ZC                        = 1050;                   // Block v4
         consensus.height_start_ZC_InvalidSerials         = 999999999;
-        consensus.height_start_ZC_PublicSpends           = 10;
-        consensus.height_start_ZC_SerialRangeCheck       = 10;
-        consensus.height_start_ZC_SerialsV2              = 40;
+        consensus.height_start_ZC_PublicSpends           = 1300;
+        consensus.height_start_ZC_SerialRangeCheck       = 999999999;
+        consensus.height_start_ZC_SerialsV2              = 1400;
         consensus.height_ZC_RecalcAccumulators           = 999999999;
 
         // Zerocoin-related params
@@ -387,19 +398,20 @@ public:
         /**
          *  ---------------
          *  algorithm: quark
-         *  pzTimestamp: 2020/04/19 CONCRETE by ZioFabry
+         *  pzTimestamp: 2020/04/30 CONCRETE by ZioFabry
          *  pubkey: 04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f
-         *  bits: 504365040     0x1e0ffff0
-         *  time: 1587254218
-         *  merkle root hash: f3ae756f9f96cc9047e36fc0ed5001f9799f439738c89ee973adb6555344d0d9
+         *  block version: 1
+         *  bits: 504365040
+         *  time: 1588281431
+         *  merkle root hash: 038bb92b0d3d55cc2288cfed57135425058e29834e759a3e078486023ed8852a
          *  Searching for genesis hash...
-         *  nonce: 1201522
-         *  genesis hash: 00000f31de924cf332441aa9b2955c1131ff7bbe81295e17fc32d5db6f7ea5e7
+         *  nonce: 327577
+         *  genesis hash: 00000f1ce413fdebc51a862283c5d992ceda41960e81aa09b979211468fcddde
          */
-        genesis = CreateGenesisBlock(1587254218, 1201522, 0x1e0ffff0, 1, 0 * COIN);
+        genesis = CreateGenesisBlock(1588281431, 327577, 0x1e0ffff0, 1, 0 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x00000f31de924cf332441aa9b2955c1131ff7bbe81295e17fc32d5db6f7ea5e7"));
-        assert(genesis.hashMerkleRoot     == uint256S("0xf3ae756f9f96cc9047e36fc0ed5001f9799f439738c89ee973adb6555344d0d9"));
+        assert(consensus.hashGenesisBlock == uint256S("0x00000f1ce413fdebc51a862283c5d992ceda41960e81aa09b979211468fcddde"));
+        assert(genesis.hashMerkleRoot     == uint256S("0x038bb92b0d3d55cc2288cfed57135425058e29834e759a3e078486023ed8852a"));
 
         consensus.fPowAllowMinDifficultyBlocks           = true;
         consensus.powLimit                               = ~UINT256_ZERO >> 20;   // CONCRETE starting difficulty is 1 / 2^12
@@ -421,6 +433,10 @@ public:
         consensus.nTargetSpacing                         = 1 * 60;
         consensus.nTimeSlotLength                        = 15;
 
+        consensus.nHalvingInterval                       = 525600;
+        consensus.nInflationPerc                         = 0.14;
+        consensus.nInflationPercAnnualDecrease           = 0.10;
+
         /* 
             Spork Key for RegTest:
               "PublicKey": "040876108cf6439f3ee4b0b5938ed699464369506162791f5c9ce8730af8c1c71caf295bc9ea5dfc67a0294b16df272ff3ef1ba27141cda9ffdfd2320da6b0cd2c",
@@ -432,21 +448,20 @@ public:
         consensus.nTime_EnforceNewSporkKey               = 0;
         consensus.nTime_RejectOldSporkKey                = 0;
 
-        // height based activations
-        consensus.height_last_PoW                        = 200;
+        consensus.height_last_PoW                        = 1000;
         consensus.height_last_ZC_AccumCheckpoint         = 0;
         consensus.height_last_ZC_WrappedSerials          = 0;
-        consensus.height_start_BIP65                     = 2;                      // Block v5
-        consensus.height_start_InvalidUTXOsCheck         = 1;
-        consensus.height_start_MessSignaturesV2          = 4;                      // height_start_TimeProtoV2
-        consensus.height_start_StakeModifierNewSelection = 2;
-        consensus.height_start_StakeModifierV2           = 3;                      // Block v6
-        consensus.height_start_TimeProtoV2               = 4;                      // Block v7
-        consensus.height_start_ZC                        = 1;                      // Block v4
+        consensus.height_start_BIP65                     = 0;                      // Block v5
+        consensus.height_start_InvalidUTXOsCheck         = 999999999;
+        consensus.height_start_MessSignaturesV2          = 0;                      // height_start_TimeProtoV2
+        consensus.height_start_StakeModifierNewSelection = 1050;
+        consensus.height_start_StakeModifierV2           = 1100;                   // Block v6
+        consensus.height_start_TimeProtoV2               = 1200;                   // Block v7
+        consensus.height_start_ZC                        = 1050;                   // Block v4
         consensus.height_start_ZC_InvalidSerials         = 999999999;
-        consensus.height_start_ZC_PublicSpends           = 1;
-        consensus.height_start_ZC_SerialRangeCheck       = 1;
-        consensus.height_start_ZC_SerialsV2              = 10;
+        consensus.height_start_ZC_PublicSpends           = 1300;
+        consensus.height_start_ZC_SerialRangeCheck       = 999999999;
+        consensus.height_start_ZC_SerialsV2              = 1400;
         consensus.height_ZC_RecalcAccumulators           = 999999999;
 
         // Zerocoin-related params

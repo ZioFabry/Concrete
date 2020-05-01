@@ -39,6 +39,10 @@ struct Params {
     int64_t nTargetSpacing;
     int nTimeSlotLength;
 
+    int nHalvingInterval;
+    double nInflationPerc;
+    double nInflationPercAnnualDecrease;
+
     // spork keys
     std::string strSporkPubKey;
     std::string strSporkPubKeyOld;
