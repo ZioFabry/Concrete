@@ -6,7 +6,7 @@
 #define SENDCHANGEADDRESSDIALOG_H
 
 #include <QDialog>
-#include "qt/pivx/snackbar.h"
+#include "qt/concrete/snackbar.h"
 
 class WalletModel;
 
