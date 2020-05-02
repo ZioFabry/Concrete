@@ -4,15 +4,6 @@
 
 #include "qt/concrete/settings/settingswidget.h"
 #include "qt/concrete/settings/forms/ui_settingswidget.h"
-#include "qt/concrete/settings/settingsbackupwallet.h"
-#include "qt/concrete/settings/settingsbittoolwidget.h"
-#include "qt/concrete/settings/settingswalletrepairwidget.h"
-#include "qt/concrete/settings/settingswalletoptionswidget.h"
-#include "qt/concrete/settings/settingsmainoptionswidget.h"
-#include "qt/concrete/settings/settingsdisplayoptionswidget.h"
-#include "qt/concrete/settings/settingsmultisendwidget.h"
-#include "qt/concrete/settings/settingsinformationwidget.h"
-#include "qt/concrete/settings/settingsconsolewidget.h"
 #include "qt/concrete/qtutils.h"
 #include "qt/concrete/defaultdialog.h"
 #include "optionsmodel.h"
@@ -84,6 +75,9 @@ SettingsWidget::SettingsWidget(CONCRETEGUI* parent) :
         ui->pushButtonTools2,
         ui->pushButtonTools5,
     };
+
+    /* disable multisend for now */
+    ui->pushButtonFile3->setVisible(false);
 
     menus.insert(ui->pushButtonFile, ui->fileButtonsWidget);
     menus.insert(ui->pushButtonConfiguration, ui->configurationButtonsWidget);
