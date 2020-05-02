@@ -7,7 +7,7 @@
 
 #include <QDialog>
 #include "amount.h"
-#include "qt/pivx/snackbar.h"
+#include "qt/concrete/snackbar.h"
 
 class CONCRETEGUI;
 class WalletModel;
