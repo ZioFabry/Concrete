@@ -1,7 +1,7 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
-// Copyright (c) 2015-2020 The PIVX Core Developers
+// Copyright (c) 2015-2020 The PIVX developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -2890,10 +2890,10 @@ bool CWallet::SetAddressBook(const CTxDestination& address, const std::string& s
             mapAddressBook[address].purpose = strPurpose;
     }
     NotifyAddressBookChanged(this, address, strName, ::IsMine(*this, address) != ISMINE_NO,
-        strPurpose, (fUpdated ? CT_UPDATED : CT_NEW));
+            mapAddressBook.at(address).purpose, (fUpdated ? CT_UPDATED : CT_NEW));
     if (!fFileBacked)
         return false;
-    std::string addressStr = ParseIntoAddress(address, strPurpose).ToString();
+    std::string addressStr = ParseIntoAddress(address, mapAddressBook.at(address).purpose).ToString();
     if (!strPurpose.empty() && !CWalletDB(strWalletFile).WritePurpose(addressStr, strPurpose))
         return false;
     return CWalletDB(strWalletFile).WriteName(addressStr, strName);
